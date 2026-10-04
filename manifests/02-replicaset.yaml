@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: web-rs
+  namespace: lab2
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: web-rs
+  template:
+    metadata:
+      labels:
+        app: web-rs
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:alpine
+        imagePullPolicy: IfNotPresent
