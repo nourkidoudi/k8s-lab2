@@ -26,7 +26,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: nginx:alpine
+        image: nginx:stable-alpine
         imagePullPolicy: IfNotPresent
         resources:
           requests:
